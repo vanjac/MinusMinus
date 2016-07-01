@@ -53,6 +53,8 @@ while counter < len(program):
                     varI -= 1
     elif c == ';':
         del stack[-1]
+    elif c == '~':
+        variables.append((0.0, stack.pop()))
     elif c == '|':
         stack.append(int(stack.pop() < 0))
     elif c == '$':
