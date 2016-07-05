@@ -2,7 +2,7 @@
 [ and end in semicolons ];
 
 [ Define a new variable and set it to a value ];
-( var$ : 2 );
+2 var$;
 
 [ Get the value of the variable ];
 [ (will be printed after program completion) ];
@@ -23,10 +23,11 @@ var^
 
 [ Define a function that takes arguments and returns a value ];
 
-( functionName$ : [
+0 functionName$;
+( functionName : [
 	[ arguments are stored in reverse order ];
-	~ ( arg2$ : 0^ );
-	~ ( arg1$ : 0^ );
+	arg2$;
+	arg1$;
 	( arg1^ - arg2^ )  [ no semicolon = return value ];
 ] );
 

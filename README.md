@@ -1,5 +1,5 @@
 # MinusMinus
-MinusMinus is a minimalistic programming language, much more so than my first attempt at that, [Minus](https://github.com/vanjac/Minus/). The entire interpreter is 95 lines of Python 3 code, and it was written during a long plane ride using the iPhone app "Pythonista 3."
+MinusMinus is a minimalistic programming language, much more so than my first attempt at that, [Minus](https://github.com/vanjac/Minus/). The entire interpreter is 93 lines of Python 3 code, and it was written during a long plane ride using the iPhone app "Pythonista 3."
 
 An example program is included.
 
