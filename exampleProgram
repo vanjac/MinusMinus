@@ -8,8 +8,9 @@
 [ (will be printed after program completion) ];
 var^
 
-[ Set a variable ];
+[ Set variable "var" to 3 ];
 ( var : 3 );
+[ Get value of "var" ];
 var^
 
 [ Math: ];
@@ -21,11 +22,15 @@ var^
 ( 2 + ( ( 3 - 4 ) / 5 ) )  [ equals 1.8 ];
 
 
-[ Define a function that takes arguments and returns a value ];
+[ Define a function that takes arguments and returns a value... ];
 
+[ Define the variable that will hold the function ];
 0 functionName$;
+
+[ Store a function (surrounded by square brackets) in the variable. ];
+[ This function takes two arguments and subtracts them ];
 ( functionName : [
-	[ arguments are stored in reverse order ];
+	[ Function arguments, in reverse order ];
 	arg2$;
 	arg1$;
 	( arg1^ - arg2^ )  [ no semicolon = return value ];
@@ -33,3 +38,28 @@ var^
 
 [ Call the function ];
 ( functionName^ ! 2 3 )
+
+
+[ Conditional ];
+( 1 ? 2 3 )
+( 0 ? 2 3 )
+[ Check if value is negative ];
+( -1 | ? 2 3 )
+( 0 | ? 2 3 )
+
+
+[ Recursion is possible... ];
+
+0 factorial$;
+
+( factorial : [
+	num$;
+	( ( ( num^ - 2 ) | ? [
+	    1
+	] [
+	    ( ( factorial^ ! ( num^ - 1 ) ) * num^ )
+	] ) ! )
+] );
+
+( factorial^ ! 4 )
+
