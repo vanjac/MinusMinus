@@ -5,12 +5,15 @@ An example program is included.
 
 Some fun features of MinusMinus:
 - **No error checking:** MinusMinus silently ignores all errors, throws an unrelated exception, or does something stranger.
-- **Broken hash codes:** MinusMinus uses a bad hash code algorithm for variable names. If two different variables have the same hash code, they are treated as the same.
+- **Broken hash codes:** MinusMinus uses a bad hash code algorithm for variable names. And if two different variables have the same hash code, they are treated as the same.
 - **No memory deallocation:** MinusMinus has commands to allocate memory, but not to free it. As a result, badly written programs will constantly grow in size until they reach the 512KB limit and start writing to variable memory (without any errors of course).
-- **Whitespace:** Due to the design, MinusMinus is very picky about whitespace. Some characters (like `[` and `]` work with no whitespace surrounding them, whereas other characters (like `+` and `-`) do not. The general rule is that infix operators, numbers, variable names, and `(` (but not `)`) require whitespace on both sides.
+- **Whitespace:** MinusMinus is very picky about whitespace. Some characters (like `[` and `]` work with no whitespace surrounding them, whereas other characters (like `+` and `-`) do not. The general rule is that infix operators, numbers, variable names, and `(` (but not `)`) require whitespace on both sides.
 - **No standard library:** Even if there was, you can't import files.
 - **No documentation:** I'm too lazy, so you'll just have to figure it out.
 
 This combination of features results in a unique development experience.
 
 To use, pipe the program to standard input. The result is a list of numbers.
+
+`cat exampleProgram | python3 minusminus.py`
+
