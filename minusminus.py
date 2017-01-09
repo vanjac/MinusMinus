@@ -62,12 +62,10 @@ while counter < len(program):
         if addr < 0:
             stack.append(memory[int(addr - memoryStart)])
         else:
-            varI = len(variables) - 1
-            while varI >= 0:
-                if variables[varI][0] == addr:
-                    stack.append(variables[varI][1])
+            for variable in reversed(variables):
+                if variable[0] == addr:
+                    stack.append(variable[1])
                     break
-                varI -= 1
     elif c == '[':
         stack.append(float(counter + 1))
         depth = 1
